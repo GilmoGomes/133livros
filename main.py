@@ -11,7 +11,22 @@ def multiplicar_2_numeros(num1, num2):
 
 
 def dividir_2_numeros(num1, num2):
-    return num1 / num2
+    try:             # tente fazer a conta
+        return num1 / num2
+    except ZeroDivisionError:
+        return 'divisao por zero'
+
+def calcular_area_quadrado(lado):
+    return lado * lado
+
+def calcular_area_retangulo(largura, comprimento):
+    return largura * comprimento
+
+def calcular_area_triangulo(largura, comprimento):
+    return (largura * comprimento) / 2
+
+
+
 
 
 if __name__ == '__main__':  # accordion da execução do script
@@ -33,3 +48,8 @@ if __name__ == '__main__':  # accordion da execução do script
 
     resultado = multiplicar_2_numeros(3, 5)
     print(f'O resultado da multiplicacao é {resultado}')
+
+    # Divicao
+    resultado = dividir_2_numeros(8, 4)
+    print(f'O resultado da divisao é {resultado}')
+
